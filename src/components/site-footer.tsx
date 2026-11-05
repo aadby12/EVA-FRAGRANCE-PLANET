@@ -3,7 +3,7 @@ import { business, footerNav } from "@/lib/business";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-ink text-ivory">
+    <footer className="border-t border-champagne/70 bg-black text-ivory">
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-3">
         <div>
           <p className="serif text-3xl tracking-[0.12em]">EVA FRAGRANCE PLANET</p>

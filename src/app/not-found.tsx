@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="eyebrow">404</p>
       <h1 className="display mt-4 text-6xl">This page is not in the collection.</h1>
       <p className="mt-5 text-ink-soft">Return to the fragrances Eva Fragrance Planet has shown, or send an enquiry on WhatsApp.</p>
-      <Link href="/shop" className="mt-8 inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase">
+      <Link href="/shop" className="btn mt-8">
         Explore Fragrances
       </Link>
     </div>

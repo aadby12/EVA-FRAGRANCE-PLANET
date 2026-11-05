@@ -34,7 +34,7 @@ export function ShopExplorer() {
   return (
     <div className="mx-auto max-w-6xl px-5 pb-20">
       <form
-        className="grid gap-4 border-y border-line py-5 md:grid-cols-4"
+        className="grid gap-4 border-y border-champagne/30 py-5 md:grid-cols-4"
         onSubmit={(event) => event.preventDefault()}
       >
         <label className="block text-sm">

@@ -40,7 +40,7 @@ export default async function CollectionPage({ params }: { params: Promise<Param
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>
-        <Link href="/shop" className="mt-12 inline-block text-xs tracking-[0.16em] uppercase underline decoration-champagne underline-offset-4">
+        <Link href="/shop" className="btn mt-12">
           Explore all fragrances
         </Link>
       </div>

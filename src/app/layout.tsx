@@ -35,7 +35,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-ivory focus:px-3 focus:py-2">
             Skip to content
           </a>
-          <div className="bg-ink text-center text-[0.72rem] tracking-[0.18em] text-ivory/85 uppercase">
+          <div className="bg-black text-center text-[0.68rem] tracking-[0.22em] text-champagne uppercase">
             <p className="px-4 py-2">Discover your next signature scent with Eva Fragrance Planet.</p>
           </div>
           <SiteHeader />

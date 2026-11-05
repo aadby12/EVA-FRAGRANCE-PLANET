@@ -25,7 +25,7 @@ export default function AboutPage() {
         </section>
         <section className="border-t border-line pt-6 text-sm leading-relaxed text-ink-soft">
           <p>
-            <span className="text-ink">Location wording on Instagram:</span> {business.locationWording}
+            <span className="text-ivory">Location wording on Instagram:</span> {business.locationWording}
           </p>
           <p className="mt-4">
             That wording is shown as it appears on the profile. This website does not convert it into a formal street address or a map pin. Ask for directions on WhatsApp before visiting.
@@ -36,7 +36,7 @@ export default function AboutPage() {
           <p className="mt-4">
             Phone {business.phoneDisplay} · {business.phoneInternational}
           </p>
-          <Link href="/contact" className="mt-8 inline-block border border-ink px-6 py-3 text-xs tracking-[0.18em] text-ink uppercase">
+          <Link href="/contact" className="btn mt-8">
             Contact
           </Link>
         </section>

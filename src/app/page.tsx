@@ -24,85 +24,77 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="mx-auto grid max-w-6xl items-end gap-10 px-5 py-14 md:grid-cols-[1.1fr_0.9fr] md:py-20">
-        <div className="rise">
+      <section className="relative min-h-[88svh] overflow-hidden bg-black">
+        <Image
+          src="/products/miss-dior-blooming-bouquet.jpg"
+          alt="Miss Dior Blooming Bouquet filmed inside Eva Fragrance Planet’s shop in Accra"
+          fill
+          priority
+          className="object-cover object-[center_18%]"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-black/25" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_42%,rgba(228,211,164,0.28),transparent_42%)]" />
+        <div className="relative z-10 flex min-h-[88svh] flex-col justify-end px-5 pt-24 pb-14 md:px-12 md:pb-20">
           <p className="eyebrow">Accra · Authentic unboxed perfumes</p>
-          <h1 className="display mt-5 text-6xl sm:text-7xl md:text-8xl">
+          <h1 className="display mt-4 max-w-3xl text-6xl text-ivory sm:text-7xl md:text-8xl">
             Your Scent.
             <span className="block">Your Signature.</span>
           </h1>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-ivory/80 md:text-base">
             Explore a curated selection of authentic unboxed perfumes at Eva Fragrance Planet. Discover fragrances that speak to your style and enquire directly through WhatsApp.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href="/shop" className="bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase">
+            <Link href="/shop" className="btn">
               Explore the Collection
             </Link>
-            <Link href="/unboxed" className="border border-ink px-6 py-3 text-xs tracking-[0.18em] uppercase">
+            <Link href="/unboxed" className="btn-line">
               Discover Unboxed Perfumes
             </Link>
           </div>
         </div>
-        <figure className="rise relative">
-          <div className="relative aspect-[4/5] overflow-hidden bg-beige">
-            <Image
-              src="/products/miss-dior-blooming-bouquet.jpg"
-              alt="Miss Dior Blooming Bouquet filmed inside Eva Fragrance Planet’s shop in Accra"
-              fill
-              priority
-              className="object-cover object-[center_20%]"
-              sizes="(max-width: 768px) 100vw, 45vw"
-            />
-          </div>
-          <figcaption className="mt-3 flex justify-between gap-4 text-xs tracking-[0.14em] text-ink-soft uppercase">
-            <span>Photographed for Eva Fragrance Planet</span>
-            <span>Accra</span>
-          </figcaption>
-        </figure>
       </section>
 
-      <section className="border-t border-line">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <p className="eyebrow">01 — Brands</p>
-          <h2 className="display mt-4 max-w-3xl text-5xl md:text-6xl">Explore the Fragrance Collection</h2>
-          <p className="mt-5 max-w-xl text-ink-soft">
+      <section className="bg-black py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-5">
+          <h2 className="gold-title text-center text-4xl md:text-5xl">Explore the fragrance collection</h2>
+          <p className="mx-auto mt-5 max-w-xl text-center text-sm leading-relaxed text-ink-soft">
             Discover fragrances and find a scent that feels like you. These groups follow the brands in the selection below, taken from recent Instagram posts.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:overflow-visible lg:grid-cols-5">
             {brands.map((brand) => (
               <Link
                 key={brand.slug}
                 href={`/collections/${brand.slug}`}
-                className="group relative min-h-56 overflow-hidden bg-ink text-ivory"
+                className="flex w-[78%] shrink-0 flex-col rounded-[1.6rem] border border-champagne/80 p-3 md:w-auto"
               >
-                <Image
-                  src={brand.image}
-                  alt=""
-                  fill
-                  className="object-cover opacity-60 transition duration-700 group-hover:scale-105 group-hover:opacity-70"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <p className="serif text-4xl">{brand.name}</p>
-                  <p className="mt-2 text-xs tracking-[0.16em] uppercase text-ivory/75">
-                    {brand.count} {brand.count === 1 ? "fragrance" : "fragrances"} in this selection
-                  </p>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[1.2rem] bg-beige">
+                  <Image
+                    src={brand.image}
+                    alt=""
+                    fill
+                    className="object-cover object-[center_25%]"
+                    sizes="(max-width: 768px) 78vw, 20vw"
+                  />
                 </div>
+                <h3 className="serif mt-4 text-center text-3xl text-ivory">{brand.name}</h3>
+                <p className="mt-1 text-center text-[0.68rem] tracking-[0.14em] text-champagne uppercase">
+                  {brand.count} {brand.count === 1 ? "fragrance" : "fragrances"}
+                </p>
+                <span className="btn mt-4 w-full">Explore collection</span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-line bg-ivory">
-        <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <p className="eyebrow">02 — Selection</p>
-          <h2 className="display mt-4 text-5xl md:text-6xl">Fragrance Favourites</h2>
-          <p className="mt-5 max-w-2xl text-ink-soft">
+      <section className="border-t border-line bg-black py-16 md:py-24">
+        <div className="mx-auto max-w-6xl px-5">
+          <h2 className="gold-title text-center text-4xl md:text-5xl">Fragrance favourites</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-sm leading-relaxed text-ink-soft">
             Explore selected fragrances from Eva Fragrance Planet. Each one below was shown on the business Instagram on 4 November 2026, with a bottle size and a promo price in the post. This is not the full catalogue, and it is not a stock list.
           </p>
-          <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product) => (
               <ProductCard key={product.slug} product={product} />
             ))}
@@ -112,7 +104,7 @@ export default function HomePage() {
 
       <section className="border-t border-line">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:py-24">
-          <div className="relative aspect-[4/5] overflow-hidden bg-beige">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem] border border-champagne/70">
             <Image
               src="/products/alien.jpg"
               alt="Mugler Alien filmed among the shelves at Eva Fragrance Planet"
@@ -122,30 +114,28 @@ export default function HomePage() {
             />
           </div>
           <div>
-            <p className="eyebrow">03 — Unboxed</p>
-            <h2 className="display mt-4 text-5xl md:text-6xl">Luxury Fragrance, Without the Box.</h2>
-            <p className="mt-5 text-ink-soft leading-relaxed">
+            <h2 className="gold-title text-4xl md:text-5xl">Luxury fragrance, without the box.</h2>
+            <p className="mt-5 leading-relaxed text-ink-soft">
               Explore the world of unboxed perfumes at Eva Fragrance Planet. Browse the available fragrances and contact us to learn more about the specific product you have in mind.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-ink-soft">
               The profile describes the offer as authentic unboxed perfumes. Packaging can differ from one fragrance to another, so the details of a particular bottle are confirmed on WhatsApp.
             </p>
-            <Link href="/unboxed" className="mt-8 inline-block border border-ink px-6 py-3 text-xs tracking-[0.18em] uppercase">
+            <Link href="/unboxed" className="btn mt-8">
               Learn About Unboxed Perfumes
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-line bg-ink text-ivory">
+      <section className="border-t border-line bg-black">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <p className="text-xs tracking-[0.28em] text-champagne uppercase">04</p>
-          <h2 className="display mt-4 max-w-3xl text-5xl md:text-6xl">Find a Fragrance That Feels Like You.</h2>
+          <h2 className="gold-title max-w-3xl text-4xl md:text-5xl">Find a fragrance that feels like you.</h2>
           <div className="mt-12 grid gap-10 md:grid-cols-3">
             {reasons.map((reason) => (
-              <article key={reason.title} className="border-t border-white/15 pt-5">
-                <h3 className="serif text-3xl">{reason.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ivory/75">{reason.copy}</p>
+              <article key={reason.title} className="border-t border-champagne/40 pt-5">
+                <h3 className="serif text-3xl text-ivory">{reason.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{reason.copy}</p>
               </article>
             ))}
           </div>
@@ -154,38 +144,31 @@ export default function HomePage() {
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-          <p className="eyebrow">05 — Feedback</p>
-          <h2 className="display mt-4 text-5xl md:text-6xl">Words from Our Customers</h2>
+          <h2 className="gold-title text-4xl md:text-5xl">Words from our customers</h2>
           <p className="mt-5 max-w-xl text-ink-soft">
             Have purchased from us? We would love to hear about your experience.
           </p>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
             The Instagram profile has a Reviews highlight. Original review text has not been supplied for this website, so no customer names, quotes, or ratings are shown here.
           </p>
-          <Link href="/contact" className="mt-8 inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase">
+          <Link href="/contact" className="btn mt-8">
             Contact Us
           </Link>
         </div>
       </section>
 
-      <section className="border-t border-line bg-ivory">
+      <section className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:items-end md:justify-between md:py-24">
           <div>
-            <p className="eyebrow">06 — Instagram</p>
-            <h2 className="display mt-4 max-w-xl text-5xl md:text-6xl">Stay Connected with Eva Fragrance Planet</h2>
+            <h2 className="gold-title max-w-xl text-4xl md:text-5xl">Stay connected with Eva Fragrance Planet</h2>
             <p className="mt-5 max-w-xl text-ink-soft">
               Follow us on Instagram for fragrance discoveries, updates, and more.
             </p>
-            <p className="mt-3 text-sm text-ink-soft">
+            <p className="mt-3 text-sm text-champagne">
               {business.instagramHandle} · {business.followersLabel}
             </p>
           </div>
-          <a
-            href={business.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-ink px-6 py-3 text-xs tracking-[0.18em] uppercase"
-          >
+          <a href={business.instagram} target="_blank" rel="noopener noreferrer" className="btn">
             Follow on Instagram
           </a>
         </div>
@@ -193,11 +176,11 @@ export default function HomePage() {
 
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-5 py-20 text-center md:py-28">
-          <h2 className="display text-5xl md:text-7xl">Ready to Discover Your Next Scent?</h2>
+          <h2 className="gold-title text-4xl md:text-6xl">Ready to discover your next scent?</h2>
           <p className="mx-auto mt-5 max-w-xl text-ink-soft">
             Explore the collection and contact us to confirm the fragrance you&apos;re interested in.
           </p>
-          <Link href="/shop" className="mt-8 inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase">
+          <Link href="/shop" className="btn mt-8">
             Shop the Collection
           </Link>
         </div>

@@ -59,7 +59,7 @@ export default function UnboxedPage() {
           href={business.whatsappShort}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase"
+          className="btn"
         >
           Ask about a fragrance
         </a>

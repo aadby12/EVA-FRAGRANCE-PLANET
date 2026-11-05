@@ -28,7 +28,7 @@ export function BagView() {
         </p>
         <Link
           href="/shop"
-          className="mt-8 inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase"
+          className="btn mt-8"
         >
           Explore Fragrances
         </Link>
@@ -91,7 +91,7 @@ export function BagView() {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-block bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase"
+          className="btn mt-6"
         >
           Continue on WhatsApp
         </a>

@@ -48,7 +48,7 @@ export function ProductPurchase({ product }: { product: Product }) {
       <div className="flex flex-col gap-3 sm:flex-row">
         <button
           type="button"
-          className="bg-ink px-6 py-3 text-xs tracking-[0.18em] text-ivory uppercase"
+          className="btn"
           onClick={() => {
             add(product.slug, quantity);
             setAdded(true);
@@ -59,7 +59,7 @@ export function ProductPurchase({ product }: { product: Product }) {
         <WhatsAppEnquiry
           product={product}
           quantity={quantity}
-          className="border border-ink px-6 py-3 text-center text-xs tracking-[0.18em] uppercase"
+          className="btn-line"
         />
       </div>
       <p className="text-sm leading-relaxed text-ink-soft">

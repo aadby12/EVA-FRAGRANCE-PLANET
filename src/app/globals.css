@@ -3,14 +3,14 @@
 @theme inline {
   --font-sans: var(--font-outfit);
   --font-serif: var(--font-cormorant);
-  --color-ink: #161311;
-  --color-ink-soft: #3a342e;
-  --color-ivory: #f6f1e8;
-  --color-paper: #fbf8f3;
-  --color-beige: #e7dccb;
-  --color-champagne: #b8956a;
-  --color-bronze: #7c5a3a;
-  --color-line: rgba(22, 19, 17, 0.12);
+  --color-ink: #090909;
+  --color-ink-soft: #cbbfa8;
+  --color-ivory: #f6f1e6;
+  --color-paper: #070707;
+  --color-beige: #141210;
+  --color-champagne: #e4d3a4;
+  --color-bronze: #c6a56b;
+  --color-line: rgba(228, 211, 164, 0.28);
 }
 
 html {
@@ -19,19 +19,30 @@ html {
 
 body {
   background: var(--color-paper);
-  color: var(--color-ink);
+  color: var(--color-ivory);
   font-family: var(--font-sans), sans-serif;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: #e4d3b8;
-  color: var(--color-ink);
+  background: #6d5830;
+  color: var(--color-ivory);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-bronze);
+  outline: 2px solid var(--color-champagne);
   outline-offset: 3px;
+}
+
+input,
+select,
+textarea {
+  color: var(--color-ivory);
+}
+
+select option {
+  color: #111;
+  background: #161412;
 }
 
 .serif {
@@ -43,18 +54,47 @@ body {
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 0.92;
+  color: var(--color-ivory);
+}
+
+.gold-title {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--color-champagne);
 }
 
 .eyebrow {
   font-size: 0.72rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--color-bronze);
+  color: var(--color-champagne);
 }
 
-.rule {
-  height: 1px;
-  background: var(--color-line);
+.btn {
+  display: inline-block;
+  border-radius: 999px;
+  background: #f4efe4;
+  color: #111;
+  padding: 0.9rem 1.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btn-line {
+  display: inline-block;
+  border-radius: 999px;
+  border: 1px solid var(--color-champagne);
+  color: var(--color-ivory);
+  padding: 0.85rem 1.35rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .rise {
